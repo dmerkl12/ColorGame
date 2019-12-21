@@ -10,3 +10,13 @@ body {
     float: left;
     margin: 1.66%;
 }
+
+
+span {
+    color: white;
+}
+
+.selected {
+    color: white;
+    background-color: steelblue;
+}
