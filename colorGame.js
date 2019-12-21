@@ -40,3 +40,28 @@ hardBtn.addEventListener("click", function () {
         squares[i].style.display = "block";
     }
 })
+
+colorDisplay.textContent = pickedColor;
+
+//loop through the colors
+for (let i = 0; i < squares.length; i++) {
+    //add initial colors to squares
+
+    // squares[i].style.backgroundColor = colors[i];
+
+    //add event listener for clickeds square
+    squares[i].addEventListener("click", function () {
+        // grab color of clicked square
+        var clickedColor = squares[i].style.backgroundColor;
+        console.log(clickedColor, pickedColor)
+        if (clickedColor === pickedColor) {
+            messageDisplay.textContent = "Correct!"
+            resetButton.textContent = "Play again?"
+            changeColors(clickedColor);
+            h1.style.backgroundColor = clickedColor;
+        } else {
+            this.style.backgroundColor = "#232323";
+            messageDisplay.textContent = "Try Again"
+        }
+    });
+}

@@ -1,6 +1,7 @@
 body {
     background-color: #232323;
     margin: 0;
+    font-family: "Montserrat", "Avenir";
 }
 
 .square {
@@ -9,8 +10,12 @@ body {
     padding-bottom: 30%;
     float: left;
     margin: 1.66%;
+    border-radius: 25px;
 }
-
+.container {
+    max-width: 600px;
+    margin: 20px auto;
+}
 
 span {
     color: white;
