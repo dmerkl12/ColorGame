@@ -11,6 +11,12 @@ body {
     float: left;
     margin: 1.66%;
     border-radius: 25px;
+    transition: all 0.5s;
+    -webkit-transition: all 0.5s;
+}
+.container {
+    max-width: 600px;
+    margin: 20px auto;
 }
 h1 {
     color: white;
@@ -22,16 +28,9 @@ h1 {
     text-transform: uppercase;
     padding: 20px 0;
 }
+
 #colorDisplay {
     font-size: 200%;
-}
-.container {
-    max-width: 600px;
-    margin: 20px auto;
-}
-
-span {
-    color: white;
 }
 
 #message {
@@ -49,25 +48,6 @@ span {
     color: white;
     background-color: steelblue;
 }
-button {
-    border: none;
-    background-color: none;
-    text-transform: uppercase;
-    height: 100%;
-    font-weight: 700;
-    color: steelblue;
-    letter-spacing: 1px;
-    font-size: inherit;
-    transition: all 0.4s;
-    -webkit-transition: all 0.4s;
-    outline: none;
-}
-
-button:hover {
-    color: white;
-    background-color: steelblue;
-}
-
 button {
     border: none;
     background-color: none;
