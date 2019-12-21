@@ -25,3 +25,22 @@ span {
     color: white;
     background-color: steelblue;
 }
+
+button {
+    border: none;
+    background-color: none;
+    text-transform: uppercase;
+    height: 100%;
+    font-weight: 700;
+    color: steelblue;
+    letter-spacing: 1px;
+    font-size: inherit;
+    transition: all 0.4s;
+    -webkit-transition: all 0.4s;
+    outline: none;
+}
+
+button:hover {
+    color: white;
+    background-color: steelblue;
+}
