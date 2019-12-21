@@ -14,6 +14,27 @@ let hardBtn = document.getElementById("hardBtn");
 let squares = document.querySelectorAll(".square");
 let colorDisplay = document.getElementById("colorDisplay");
 
+function setUpMode(){
+    for (let i = 0; i < modeButtons.length; i++) {
+        //mode buttons event listeners
+        modeButtons[i].addEventListener("click", function () {
+            modeButtons[0].classList.remove("selected");
+            modeButtons[1].classList.remove("selected");
+            this.classList.add("selected");
+            if (this.textContent === "Easy") {
+                numSquares = 3;
+            } else {
+                numSquares = 6;
+            }
+            //how many squares to show
+            //pick new colors
+            //pick new picked color
+            //update page to reflect pages
+            reset();
+        });
+    }
+}
+
 function setUpSquares(){
     for (let i = 0; i < squares.length; i++) {
         //add initial colors to squares
