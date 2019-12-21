@@ -10,7 +10,12 @@ let resetButton = document.getElementById("reset");
 
 let modeButtons = document.querySelectorAll(".mode");
 
-
+init()
+//start game upon opening app!
+function init() {
+setUpMode();
+setUpSquares();
+}
 function setUpMode(){
     for (let i = 0; i < modeButtons.length; i++) {
         //mode buttons event listeners
