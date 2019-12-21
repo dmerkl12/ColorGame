@@ -41,6 +41,23 @@ hardBtn.addEventListener("click", function () {
     }
 })
 
+resetButton.addEventListener("click", function () {
+    //generate new colors
+    colors = generateRandomColors(numSquares);
+    //picked new a new random color
+    pickedColor = pickColor();
+    //change colorDisplay to match picked color
+    colorDisplay.textContent = pickedColor;
+    this.textContent = "New Colors"
+    messageDisplay.textContent = "";
+    //change the colors of the squares
+    for (let i = 0; i < squares.length; i++) {
+        //add initial colors to squares
+        squares[i].style.backgroundColor = colors[i];
+    }
+    h1.style.backgroundColor = "steelblue"
+})
+
 colorDisplay.textContent = pickedColor;
 
 //loop through the colors
