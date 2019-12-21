@@ -2,6 +2,12 @@ let numSquares = 6;
 let colors;
 let pickedColor;
 
+let squares = document.querySelectorAll(".square");
+let colorDisplay = document.getElementById("colorDisplay");
+let messageDisplay = document.getElementById("message");
+let h1 = document.querySelector("h1");
+let resetButton = document.getElementById("reset");
+
 let easyBtn = document.getElementById("easyBtn");
 let hardBtn = document.getElementById("hardBtn");
 
@@ -81,4 +87,17 @@ for (let i = 0; i < squares.length; i++) {
             messageDisplay.textContent = "Try Again"
         }
     });
+}
+
+function changeColors(color) {
+    //loop through all squares
+    for (let i = 0; i < squares.length; i++) {
+        // change each color to match given color
+        squares[i].style.backgroundColor = color;
+    }
+}
+
+function pickColor() {
+    let random = Math.floor(Math.random() * colors.length)
+    return colors[random];
 }
