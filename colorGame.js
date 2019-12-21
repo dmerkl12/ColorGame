@@ -10,19 +10,25 @@ let resetButton = document.getElementById("reset");
 
 let modeButtons = document.querySelectorAll(".mode");
 
+
 function setUpMode(){
     for (let i = 0; i < modeButtons.length; i++) {
         //mode buttons event listeners
         modeButtons[i].addEventListener("click", function () {
             modeButtons[0].classList.remove("selected");
             modeButtons[1].classList.remove("selected");
+            modeButtons[2].classList.remove("selected");
             this.classList.add("selected");
             if (this.textContent === "Easy") {
                 //how many squares to show
                 numSquares = 3;
-            } else {
+            } else if (this.textContent === "Medium"){
                 //how many squares to show
                 numSquares = 6;
+            }
+            else{
+                //how many squares to show
+                numSquares = 9;
             }
             //update page to reflect pages
             reset();
