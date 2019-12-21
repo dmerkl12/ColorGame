@@ -14,6 +14,27 @@ let hardBtn = document.getElementById("hardBtn");
 let squares = document.querySelectorAll(".square");
 let colorDisplay = document.getElementById("colorDisplay");
 
+function setUpSquares(){
+    for (let i = 0; i < squares.length; i++) {
+        //add initial colors to squares
+        //add event listener for clickeds square
+        squares[i].addEventListener("click", function () {
+            // grab color of clicked square
+            var clickedColor = squares[i].style.backgroundColor;
+            if (clickedColor === pickedColor) {
+                messageDisplay.textContent = "Correct!"
+                resetButton.textContent = "Play again?"
+                changeColors(clickedColor);
+                h1.style.backgroundColor = clickedColor;
+            } else {
+                this.style.backgroundColor = "#232323";
+                messageDisplay.textContent = "Try Again"
+            }
+        });
+    }
+    reset();
+}
+
 function reset() {
     colors = generateRandomColors(numSquares);
     //picked new a new random color
