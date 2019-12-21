@@ -101,3 +101,26 @@ function pickColor() {
     let random = Math.floor(Math.random() * colors.length)
     return colors[random];
 }
+
+function generateRandomColors(num) {
+    // make an array
+    let arr = []
+    //add num random colors to array
+    for (let i = 0; i < num; i++) {
+        //get random color
+        arr.push(randomColor())
+
+    }
+    //return array
+    return arr;
+}
+function randomColor() {
+    //pick a red from 0-255
+    let r = Math.floor(Math.random() * 256);
+    //pick a green from 0-255
+    let g = Math.floor(Math.random() * 256);
+    //pick a blue from 0-255
+    let b = Math.floor(Math.random() * 256);
+    "rgb(r, g, b)"
+    return "rgb(" + r + ", " + g + ", " + b + ")";
+}
